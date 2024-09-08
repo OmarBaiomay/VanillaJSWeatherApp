@@ -21,14 +21,14 @@
 </head>
 <body>
 
-    <header class="headee">
+    <header class="header">
         <div class="container">
             <a href="" class="logo">
                 <img src="./assets/images/WeatherGOLogo.svg" alt="Weather Go Logo" />
             </a>
 
             <div class="search-view" data-search-view>
-                <div class="search-wrapper">
+                <div class="search-wrapper ">
                     <input type="search" name="search" placeholder="search City..." autocomplete="off" class="search-field" data-search-field>
                     <span class="m-icon">Search</span>
 
@@ -37,8 +37,28 @@
                     </button>
                 </div>
                 <div class="search-result" data-search-result>
-                    
+                    <ul class="view-list" data-search-list>
+                        <li class="view-item">
+                            <span class="m-icon">location_on</span>
+                            <div>
+                                <p class="item-title">London</p>
+    
+                                <p class="label-2 item-subtitle">State of London, GB</p>
+                            </div>
+                            <a href="" class="item-link has-state" data-search-toggler></a>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-btn has-state" aria-label="Open Search" data-search-toggler>
+                    <span class="m-icon icon">search</span>
+                </button>
+                <a href="#/current-location" class="btn-primary has-state"  data-current-location-btn>
+                    <span class="m-icon icon">my_location</span>
+                    <span class="span">Current Location</span>
+                </a>
             </div>
         </div>
     </header>
