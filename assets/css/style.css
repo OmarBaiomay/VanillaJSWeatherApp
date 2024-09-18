@@ -4,7 +4,7 @@
 
     /* Colors */
 
-    --primary: #B5A1E5; 
+    --primary: #2DABE3; 
     --on-primary: #100E17; 
     --background: #131214;
     --on-background: #EAE6F2;
@@ -700,3 +700,102 @@ article.container::before{
 }
 
 
+/* Footer  */
+footer{
+    color: var(--on-surface-variant);
+    text-align: center;
+    margin-block-start: 28px;
+    margin-block-end: 28px;
+}
+
+footer .body-3:last-child{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-block-start: 5px;
+}
+
+
+.loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    display: none;
+    place-items: center;
+    z-index: 11;
+}
+
+.loading::before{
+    content: "";
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--on-background);
+    border-block-start-color: transparent;
+    border-radius: var(--radius-circle);
+
+    animation: loading 500ms linear infinite;
+}
+
+
+.error-content{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .container{
+        pad: 24px;
+    }
+
+    .title-1{
+        font-size: 2.4rem;
+    }
+
+    .section > .title{
+        margin-block-end: 16px;
+    }
+
+    .card-lg{
+        padding: 24px;
+    }
+
+    .card-sm{
+        padding: 20px;
+        display: grid;
+        grid-template-rows: min-content 1fr;
+    }
+
+    .badge{
+        top: 20px;
+        right: 20px;
+    }
+
+    .header-actions{
+        gap: 24px;
+    }
+
+    .header .btn-primary{
+        padding-inline: 16px 24px;
+    }
+
+    .header .btn-primary .span{
+        display: block;
+    }
+
+    .search-view{
+        clip-path: circle(3% at calc(100% - 273px) 6%);
+    }
+}
