@@ -1,6 +1,6 @@
 'use strict';
 
-export const weekDayName = [
+export const weekDayNames = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -10,7 +10,7 @@ export const weekDayName = [
     "Saturday"
 ];
 
-export const monthName = [
+export const monthNames = [
     "Jan",
     "Feb",
     "Mar",
@@ -34,8 +34,8 @@ export const monthName = [
 
 export const getDate = function(dateUnix, timezone){
     const date = new Date((dateUnix + timezone) * 1000);
-    const weekDayName = weekDayName[date.getUTCDay()];
-    const monthName = monthName[date.getUTCMonth()];
+    const weekDayName = weekDayNames[date.getUTCDay()];
+    const monthName = monthNames[date.getUTCMonth()];
 
     return `${weekDayName} ${date.getUTCDate()}, ${monthName}`;
 }
@@ -82,7 +82,7 @@ export const mps_to_kmh = mps =>{
     return mph / 1000;
 }
 
-export const apiText = {
+export const aqiText = {
     1:{
         level:"Good",
         message: "Air quality is considered satisfactory, and air pollution poses little or no risk" 

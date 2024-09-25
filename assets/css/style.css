@@ -328,6 +328,21 @@ body {
     font-size: var(--label-2);
 }
 
+.fade-in{
+    animation: fade-in 1000ms ease forwards;
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
 
 .badge {
     position: absolute;
@@ -979,7 +994,7 @@ footer .body-3:last-child {
 
     .search-view .view-list {
         position: absolute;
-        top: 1000%;
+        top: 100%;
         left: 0;
         width: 100%;
         max-height: 360px;

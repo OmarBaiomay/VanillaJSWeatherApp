@@ -2,7 +2,7 @@
 
 import {updateWeather, error404} from './app.js';
 
-const defaultLocation = "#/weather?lat=30.033333&lon=31.233334 " // Cairo
+const defaultLocation = "#/weather?lat=30.033333&lon=31.233334" // Cairo
 
 const currentLocation = function () {
     window.navigator.geolocation.getCurrentPosition(res=>{
@@ -30,7 +30,7 @@ const routes = new Map([
 
 const checkHash = function (){
     const requestURL = window.location.hash.slice(1);
-    const [rout, query] = requestURL.includes ? requestURL.split("?") : [requestURL];
+    const [route, query] = requestURL.includes ? requestURL.split("?") : [requestURL];
 
     routes.get(route) ? routes.get(route)(query) : error404();
 }
